@@ -1,0 +1,19 @@
+{
+  "name": "harold",
+  "version": "1.0.0",
+  "description": "a chat bot written in Elm",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:elm && node app.js",
+    "build:elm": "elm make src/Main.elm --output dist/harold.js",
+    "watch:elm": "chokidar './src' -c 'npm run build:elm'",
+    "watch:node": "nodemon app.js",
+    "watch": "npm run watch:elm & npm run watch:node"
+  },
+  "author": "Ryan Haskell-Glatz",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "nodemon": "^1.17.5"
+  }
+}
